@@ -1,0 +1,92 @@
+.users { 
+    align-items: center;
+    background: var(--background-oscuo);
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    justify-content: center;
+}
+
+.users__container {
+    align-items: flex-start;
+    background: var(--background-oscuo-transparencia);
+    border-radius: 15px;
+    border: 1px solid var(--background-blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    overflow-x: auto;
+    padding: 15px 0;
+    width: 90vw;
+}
+
+.users__parameters {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.users__list-titles {
+    align-items: center;
+    color: var(--font-avalith-rojo);
+    display: flex;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.users__list-parameters, .users__list-parameters2 {
+    align-items: center;
+    color: var(--font-color-white);
+    display: flex;
+    padding: 5px;
+    white-space: wrap;
+}
+
+.users__list-parameters2 {
+    background: var(--background-semi-gris);
+}
+
+.parameter__id {
+    display: flex;
+    justify-content: center;
+    padding: 0 2px;
+    width: 40px;
+}
+
+.parameter__large {
+    display: flex;
+    padding: 0 2px;
+    width: 160px;
+}
+
+.parameter__xlarge {
+    display: flex;
+    padding: 0 2px;
+    width: 260px;
+}
+
+.parameter__short {
+    display: flex;
+    justify-content: center;
+    padding: 0 2px;
+    width: 100px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .users { 
+        background: url('../../assets/deskBlue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .users__container {
+        align-items: center;
+    }
+
+}

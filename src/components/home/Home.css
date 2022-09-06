@@ -1,0 +1,50 @@
+.homepage {
+    align-items: center;
+    background: var(--background-oscuo);
+    color: var(--font-color-white);
+    display: flex;
+    font-family: var(--montserrat);
+    font-size: 2rem;
+    height: 87vh;
+    justify-content: center;
+}
+
+.presentation__container {
+    font-size: 1.5rem;
+}
+
+.presentation__welcome {
+    color: var(--font-avalith-rojo);
+    font-family: var(--montserrat);
+    font-size: 1.5rem; 
+    font-weight: bolder;
+    padding: 10px 0;
+}
+
+.presentation__name {
+    color: var(--font-color-white);
+    font-family: var(--poppins);
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.presentation__point {
+    color: var(--font-avalith-rojo);
+    font-size: 1.7rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .homepage {
+        align-items: center;
+        display: flex;
+        background: url('../../assets/deskBlue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+    }
+
+}

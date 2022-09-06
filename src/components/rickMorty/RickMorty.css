@@ -1,0 +1,119 @@
+.dashboard__characters {
+    align-items: center;
+    background: var(--background-oscuo);
+    display: flex;
+    font-family: var(--montserrat);
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0;
+}
+
+.dashboard__cards {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.initiation__character, .initiation__character-alive, .initiation__character-dead {
+    align-items: center;
+    background: var(--background-unknown);
+    border-radius: 15px;
+    color: var(--font-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.initiation__character-alive {
+    background: var(--background-alive);
+    color: var(--font-color-alive);
+}
+
+.initiation__character-dead  {
+    background:var(--background-dead);
+    color: var(--font-color-dead)
+}
+
+.dashboard__cards-link {
+    text-decoration: none;
+}
+
+.card__character {
+    display: flex;
+    flex-direction: row;
+    height: 310px;
+    margin: 10px;
+    transition: 1s;
+    width: 310px;
+}
+
+.card__character:hover {
+    transform: scale(1.05);
+}
+
+.name__character {
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 50px;
+}
+
+.image__character {
+    border-radius: 30px;
+    padding: 10px 1px;
+    width: 95%;
+}
+
+.details__character {
+    border: 2px solid rgb(158 158 158);
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 3px;
+    padding: 5px 0 0 5px;
+}
+
+.gender__character, .species__character, .status__character {
+    color: var(--font-color-gray);
+    font-size: 0.9rem;
+    padding: 0 7px;
+    white-space: nowrap;
+}
+
+
+
+.button__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button__nextPage {
+    align-items: center;
+    background: var(--background-oscuo);
+    border: 1px solid;
+    border-color: var(--background-blanco);
+    border-radius: 20%;
+    color: var(--font-color-white);
+    display: flex;
+    font-family: var(--montserrat);
+    font-weight: bolder;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.5s;
+    margin: 15px;
+    width: 40px;
+}
+
+.button__nextPage:hover {
+    background: var(--background-blanco);
+    color: var(--font-color-negro);
+}
+
+.button__container{
+    padding: 10px;
+}

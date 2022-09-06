@@ -1,0 +1,134 @@
+.form { 
+    align-items: center;
+    background: var(--background-oscuo);
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    justify-content: center;
+}
+
+.form__titulo {
+    display: contents;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    width: 90vw;
+}
+
+.form__titulo-detalle {
+    background: var(--background-oscuo);
+    color: var(--font-color-white);
+    font-size: 2rem;
+    margin-top: 70px;
+    text-align: center;
+    width: 90vw;
+}
+
+.form__container {
+    align-items: flex-start;
+    background: var(--background-oscuo-transparencia);
+    border-radius: 15px;
+    display: flex;
+    font-family: var(--montserrat);
+    flex-direction: column;
+    margin: 15px;
+    padding: 10px;
+    width: 90vw;
+}
+
+.form__input-section {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.form__textarea-section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.form__input-name, .form__input-email {
+    background: rgb(0 0 0 / 0%);
+    border: 1px solid var(--background-blanco);
+    border-radius: 5px;
+    color: var(--font-color-white);
+    font-family: var(--montserrat);
+    font-size: 0.9rem;
+    margin: 4px;
+    height: 1.2rem;
+    width: 100%;
+}
+
+.form__input-name::placeholder, .form__input-email::placeholder {
+    color: var(--font-color-white);
+}
+
+.form__textarea-menssage {
+    background: rgb(0 0 0 / 0%);
+    border: 1px solid var(--background-blanco);
+    border-radius: 5px;
+    color: var(--font-color-white);
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    margin: 3px -5px;
+    margin-bottom: 10px;
+    width: inherit;
+}
+
+.form__textarea-menssage::placeholder {
+    color: var(--font-color-white);
+    font-size: 1rem;
+}
+
+.form__input-title {
+    color: var(--font-avalith-rojo);
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    width: 80px;
+}
+
+.form__btn {
+    align-items: center;
+    background: var(--background-oscuo-transparencia);
+    border: 1px solid var(--background-blanco);
+    border-radius: 10px;
+    color: var(--font-color-white);
+    display: flex;
+    font-weight: bolder;
+    height: 1.7rem;
+    justify-content: center;
+    transition: 0.5s;
+    width: 150px;
+}
+
+.form__btn:hover {
+    background: var(--background-blanco);
+    color: var(--font-avalith-rojo);
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .form{
+        background: url('../../assets/deskBlue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .form__container {
+        width: 60vw;
+    }
+
+    .form__titulo-detalle {
+        background: var(--background-oscuo-transparencia);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        width: 50vw;
+    }
+
+}

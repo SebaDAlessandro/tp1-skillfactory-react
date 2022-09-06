@@ -1,0 +1,59 @@
+.charter__container{
+    align-items: center;
+    background: var(--background-oscuo);
+    display: flex;
+    height: 87vh;
+    justify-content: center;
+}
+
+.card__character-details {
+    display: flex;
+    flex-direction: row;
+    transition: 1s;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.character__status-unknown, .character__status-alive, .character__status-dead {
+    align-items: center;
+    background: var(--background-unknown);
+    border-radius: 15px 0 0 15px;
+    color: var(--font-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.character__status-alive {
+    background: var(--background-alive);
+    color: var(--font-color-alive);
+}
+
+.character__status-dead  {
+    background:var(--background-dead);
+    color: var(--font-color-dead)
+}
+
+.data {
+    color: rgb(255 255 0);
+    font-weight: 500;
+}
+
+.property__character {
+    color: var(--font-color-gray);
+    font-size: 0.9rem;
+    padding: 0 7px;
+    white-space: nowrap;
+}
+
+.dashboard__cards-link {
+    text-decoration: none;
+}
+
+.img__character {
+    border-radius: 30px;
+    padding: 10px 1px;
+    width: 100%;
+}
