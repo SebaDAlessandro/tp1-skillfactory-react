@@ -26,10 +26,14 @@ const RickMorty = () => {
         getChartersAxios();
     },[page])
 
-    const getChartersAxios = async ()=>{
-        const getCharters = await axios.get(URL_RICK_AND_MORTY + `?page=${page}`);
-        setCharters([...getCharters.data.results])
-    }
+    try {
+        const getChartersAxios = async ()=>{
+            const getCharters = await axios.get(URL_RICK_AND_MORTY + `?page=${page}`);
+            setCharters([...getCharters.data.results])
+        }  
+    } catch (error) {
+        console.log(error)
+    } 
 
 
     //{name, image, gender, species, status}

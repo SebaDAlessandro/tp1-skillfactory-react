@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+##### septiembre 2022
+# TP2 - React App (Skill Factory by AVALITH.)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> El objetivo principal de este Challenge consistió en pasar una pagina clásica de HTML, CSS y JavaScript a un proyecto de React. La idea general es crear múltiples componentes, con distintos grados de dificultad, he ir renderizando cada uno con la implementación de nuevas dependencias. Con lo cual, podrán encontrar dentro del package.json librerías como:
+- React - Hook - Form
+- Axios
+- React - Router - Dom
+- Typewriter-effect
+- Moment
 
-## Available Scripts
 
-In the project directory, you can run:
+## Primeros pasos con Create React App
 
-### `npm start`
+Es importante destacar que este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preparación del entorno
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Descargue el proyecto desde mi repositorio de  [Github](https://github.com/SebaDAlessandro/tp1-skillfactory-react).
 
-### `npm test`
+- 1: Sobre la lista de archivos, haga clic en **Código**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![foto: lista de archivos](https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png)
 
-### `npm run build`
+- 2: Método HTTPS: Dentro de las opciones seleccione el **Icono de Copiar Enlace**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![foto: icono de enlace](https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Para otras opciones de clonación diríjase al siguiente enlace [cloando repositorios](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository)*.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 3: Utilizando la terminal, ejecute los siguientes comandos:
 
-### `npm run eject`
+```sh
+cd [carperta-destino]
+$ git clone [URL copiada]
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación de dependencias
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este proyecto requiere [mpm.js](https://www.npmjs.com/) para funcionar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instale las dependencias y ejecute el servidor.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+cd [carperta-clonada]
+$ npm i
+$ npm start
+```
 
-## Learn More
+**_IMPORTANTE:_** *el programa se ejecutará en el navegador que tenga por defecto e intentará utilizar como base el puerto 3000.*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Objetivos del proyecto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Desarrollar un sitio que contenga las siguientes características**
+    - Pagina principal (home) que contenga 3 enlaces:
+    - 1er enlace: un "Formulario de Contacto".
+    - 2do enlace: generar un cuadro con información de clientes el cual se obtiene tras realizar una petición a la API **[{JSON} Placeholder](https://jsonplaceholder.typicode.com/users)**
+    - 3er enlace: generar un dashboard con los personajes de Rick & Morty los cuales se obtienen de realizar un llamado a la API **[https://rickandmortyapi.com/](https://rickandmortyapi.com/api/character)**
+    - Sobre este último se debe poder acceder al detalle de cada personaje haciendo click en cada tarjeta.
+- **Se debe mantener un maquetado correcto en todo momento**
+- **Estilos de CSS libres**
+- **Debe poder renderizarse en otros dispositivos**
 
-### Code Splitting
+## Particularidad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Es importante destacar que parte del trabajo se realizó en equipo pero nuestra metodología se basó en generar espacios de consultas sobre funcionalidades unicamente. Después cada uno le brindó a su proyecto el maquetado y el estilo que consideró adecuado.
 
-### Analyzing the Bundle Size
+#### Los cracks con lo que forme equipo:
+- **[Javier Huebra](https://www.linkedin.com/in/javieremanuelhuebra/)**
+- **[Matias Spirilis](https://www.linkedin.com/in/matias-spirilis/)**
+- **[Rolando Duarte](https://www.linkedin.com/in/rolando-ramon-duarte-93116b17a/)**
+- **[Sebastián D'Alessandro](https://www.linkedin.com/in/sebadalessandro/)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Agradecimientos
 
-### Making a Progressive Web App
+En general: a todo el equipo de **AVALITH** por impulsar el programa **Skill Factoy de React** 100% remoto y gratuito que nos permite seguir creciendo bit a bit en este hermoso mundo IT.
+En particular al grupo de genios con lo que me tocó hacer este proyecto y por último, pero no menos importante, a nuestro sensei **Fabián Tureo** quien muestra un entusiasmo superlativo y se brinda en cada encuentro de la mejor manera.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**VAMOS POR MAS!!!**

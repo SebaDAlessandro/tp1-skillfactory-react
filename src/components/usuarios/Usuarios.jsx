@@ -13,13 +13,16 @@ const Usuarios = () => {
     getUsuariosAxios();
   },[])
 
+  try {
+    const getUsuariosAxios = async ()=>{
+      const getUsuarios = await axios.get(URL_USERS);
+      setUsuarios(getUsuarios.data)
+  /*     console.log(usuarios)
+   */  }
+  } catch (error) {
+    console.log(error)
+  }
 
-  const getUsuariosAxios = async ()=>{
-    const getUsuarios = await axios.get(URL_USERS);
-    setUsuarios(getUsuarios.data)
-/*     console.log(usuarios)
- */  }
-   
   return (
 
     <div className="users">
@@ -46,8 +49,8 @@ const Usuarios = () => {
               company={usuario.company}
             />
 
-              )
-          })
+          )
+        })
         }
           
       </div>
