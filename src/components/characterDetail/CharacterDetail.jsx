@@ -37,7 +37,10 @@ const CharacterDetail = () => {
                     <h2 className="property__character"><p className="data">Status:</p> {character.status}</h2>
                     <h2 className="property__character"><p className="data">Creado:</p> {moment(character.created).format('DD/MM/YY')}</h2>
                     <h2 className="property__character"><p className="data">Type:</p> {character.type===''? 'none':character.type}</h2>
-    {/*                 <h2 className="status__character"><p className="date">Episodios:</p> {character.episode.length}</h2> */}
+    {/*                 <h2 className="status__character"><p className="date">Episodios:</p> {character.episode.length}</h2> 
+                        como se puede volver al componenete Rick and Morty sin que se pierda el lugar
+                        recordar meter el try-catch
+    */}
                 </div>
             </div>
         </div>

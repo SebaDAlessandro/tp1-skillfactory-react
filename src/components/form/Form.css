@@ -32,7 +32,7 @@
     flex-direction: column;
     margin: 15px;
     padding: 10px;
-    width: 90vw;
+    width: 90%;
 }
 
 .form__input-section {
@@ -45,7 +45,7 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 5px;
     width: 100%;
 }
 
@@ -90,6 +90,16 @@
     width: 80px;
 }
 
+.form__input-error {
+    color: var(--font-avalith-rojo);
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: flex-start;
+    margin-left: 5.5rem;
+}
+
+
+
 .form__btn {
     align-items: center;
     background: var(--background-oscuo-transparencia);
@@ -100,6 +110,7 @@
     font-weight: bolder;
     height: 1.7rem;
     justify-content: center;
+    margin-top: 5px;
     transition: 0.5s;
     width: 150px;
 }
