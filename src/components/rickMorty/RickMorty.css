@@ -88,8 +88,13 @@
 
 
 .button__container {
+    align-items: center;
     display: flex;
     flex-direction: row;
+}
+
+.button__container-pagina{
+    color: var(--font-color-white);
 }
 
 .button__nextPage {

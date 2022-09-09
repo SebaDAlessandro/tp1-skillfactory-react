@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import RickMortyCard from './RickMortyCard'
 import './RickMorty.css'
-import { Link } from 'react-router-dom'
+import { useParams ,Link } from 'react-router-dom'
+
 
 const RickMorty = () => {
 
@@ -10,31 +11,35 @@ const RickMorty = () => {
     
     const [charters, setCharters] = useState([])
 
-    const [page, setPage] = useState(1)
+    const { page } = useParams()
+
+    const [pag, setPage] = useState(parseInt(page))
 
     const nextPage = ()=>{
-        let plus = page + 1;
-        page===42 ? setPage(42) : setPage(plus);
+        let plus = pag + 1;
+        pag===42 ? setPage(42) : setPage(plus);
     }
 
     const previousPage = ()=>{
-        let subtraction = page - 1;
-        page===1 ? setPage(1) : setPage(subtraction);
+        let subtraction = pag - 1;
+        pag===1 ? setPage(1) : setPage(subtraction);
     }
 
-    useEffect(()=>{
-        getChartersAxios();
-    },[page])
+/*     const pagVeinte = ()=>{
+        setPage(20)
+    } */
 
     try {
+        useEffect(()=>{
+            getChartersAxios();
+        },[pag])
         const getChartersAxios = async ()=>{
-            const getCharters = await axios.get(URL_RICK_AND_MORTY + `?page=${page}`);
+            const getCharters = await axios.get(URL_RICK_AND_MORTY + `?page=${pag}`);
             setCharters([...getCharters.data.results])
         }  
     } catch (error) {
         console.log(error)
-    } 
-
+    }
 
     //{name, image, gender, species, status}
   return (
@@ -43,7 +48,7 @@ const RickMorty = () => {
         <div className="dashboard__cards" id="dashboardCards">
             {charters.map((charter,index)=>{
                 return(
-                    <Link to={`/CharacterDetail/${charter.id}`} key={index} className={'dashboard__cards-link'}>
+                    <Link to={`/CharacterDetail/${charter.id}/${pag}`} key={index} className={'dashboard__cards-link'}>
                         <RickMortyCard
                             key={index}
                             name={charter.name}
@@ -59,9 +64,11 @@ const RickMorty = () => {
         </div>
 
         <div className='button__container'>
-            <button onClick={previousPage} className="button__nextPage" id="previousPage">-</button>
-            <button onClick={nextPage} className="button__nextPage" id="nextPage">+</button>
-        </div>
+            {pag>1 && <button onClick={previousPage} className="button__nextPage" id="previousPage">-</button>}
+            <span className='button__container-pagina'>{pag}</span>
+            {pag<42 && <button onClick={nextPage} className="button__nextPage" id="nextPage">+</button>}
+{/*             <button onClick={pagVeinte} className="button__nextPage">20</button>
+ */}        </div>
 
     </section>
   )

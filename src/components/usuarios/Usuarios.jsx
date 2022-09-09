@@ -9,11 +9,11 @@ const Usuarios = () => {
   
   const [usuarios, setUsuarios] = useState([]);
 
-  useEffect(()=>{
-    getUsuariosAxios();
-  },[])
-
+  
   try {
+    useEffect(()=>{
+      getUsuariosAxios();
+    },[])
     const getUsuariosAxios = async ()=>{
       const getUsuarios = await axios.get(URL_USERS);
       setUsuarios(getUsuarios.data)

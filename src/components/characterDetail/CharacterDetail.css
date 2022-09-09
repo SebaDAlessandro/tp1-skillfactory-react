@@ -2,6 +2,7 @@
     align-items: center;
     background: var(--background-oscuo);
     display: flex;
+    flex-direction: column;
     height: 87vh;
     justify-content: center;
 }
@@ -13,6 +14,7 @@
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 50px;
 }
 
 .character__status-unknown, .character__status-alive, .character__status-dead {
@@ -56,4 +58,26 @@
     border-radius: 30px;
     padding: 10px 1px;
     width: 100%;
+}
+
+.button__back {
+    align-items: center;
+    background: var(--background-oscuo);
+    border: 1px solid;
+    border-color: var(--background-blanco);
+    border-radius: 20%;
+    color: var(--font-color-white);
+    display: flex;
+    font-family: var(--montserrat);
+    font-weight: bolder;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.5s;
+    margin: 5px;
+    width: 40px;
+}
+
+.button__back:hover {
+    background: var(--background-blanco);
+    color: var(--font-color-negro);
 }

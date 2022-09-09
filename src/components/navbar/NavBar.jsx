@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Link to='/' className="header__link">Home</Link>
                     <Link to='/form' className="header__link">Formulario</Link>
                     <Link to='/usuarios' className="header__link">Usuarios</Link>
-                    <Link to='/rickmorty' className="header__link">Rick & Morty</Link>
+                    <Link to='/rickmorty/1' className="header__link">Rick & Morty</Link>
                 </ul>
             </nav>
     </div>

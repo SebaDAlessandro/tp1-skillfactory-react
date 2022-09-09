@@ -27,11 +27,11 @@ function App() {
             element={<Usuarios />}
           />
           <Route 
-            path="/rickmorty"
+            path="/rickmorty/:page"
             element={<RickMorty />}
           />
           <Route 
-            path="/CharacterDetail/:id"
+            path="/CharacterDetail/:id/:page"
             element={<CharacterDetail />}
           />
       </Routes>
