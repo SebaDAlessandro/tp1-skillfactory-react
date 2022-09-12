@@ -3,6 +3,7 @@ import axios from 'axios'
 import RickMortyCard from './RickMortyCard'
 import './RickMorty.css'
 import { useParams ,Link } from 'react-router-dom'
+import spinner from '../../assets/spinner.gif'
 
 
 const RickMorty = () => {
@@ -32,7 +33,7 @@ const RickMorty = () => {
     try {
         useEffect(()=>{
             getChartersAxios();
-        },[pag])
+        },[pag,charters])
         const getChartersAxios = async ()=>{
             const getCharters = await axios.get(URL_RICK_AND_MORTY + `?page=${pag}`);
             setCharters([...getCharters.data.results])
@@ -46,7 +47,8 @@ const RickMorty = () => {
     
     <section className="dashboard__characters">
         <div className="dashboard__cards" id="dashboardCards">
-            {charters.map((charter,index)=>{
+            {charters.length === 0 ? (<img className='loading' src={spinner} alt='spinner imagen'/>) :
+            charters.map((charter,index)=>{
                 return(
                     <Link to={`/CharacterDetail/${charter.id}/${pag}`} key={index} className={'dashboard__cards-link'}>
                         <RickMortyCard

@@ -122,3 +122,7 @@
 .button__container{
     padding: 10px;
 }
+
+.loading{
+    width: 350px;
+}

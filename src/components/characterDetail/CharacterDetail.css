@@ -81,3 +81,7 @@
     background: var(--background-blanco);
     color: var(--font-color-negro);
 }
+
+.loading {
+    width: 250px;
+}

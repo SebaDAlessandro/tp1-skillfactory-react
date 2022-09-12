@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams, Link } from 'react-router-dom'
 import moment from 'moment';
 import "./CharacterDetail.css"
+import spinner from '../../assets/spinner.gif'
 
 const CharacterDetail = () => {
 
@@ -34,19 +35,23 @@ const CharacterDetail = () => {
             {
             /*console.log('dentro del render: ',character)*/
             }
-                <div className={character.status==='unknown' ? "character__status-unknown" : (character.status==='Alive' ? 'character__status-alive' : 'character__status-dead')}>
-                    <img className="img__character" src={character.image} alt="img character"/>
-                </div>
-                <div className="details__character">
-                    <h2 className="property__character"><p className="data">Nombre:</p> {character.name}</h2>
-                    <h2 className="property__character"><p className="data">Género:</p> {character.gender}</h2>
-                    <h2 className="property__character"><p className="data">Especie:</p> {character.species}</h2>
-                    <h2 className="property__character"><p className="data">Status:</p> {character.status}</h2>
-                    <h2 className="property__character"><p className="data">Creado:</p> {moment(character.created).format('DD/MM/YY')}</h2>
-                    <h2 className="property__character"><p className="data">Type:</p> {character.type===''? 'none':character.type}</h2>
-    {/*NO PUEDO TRAER DATOS!                 
-    <h2 className="status__character"><p className="date">Episodios:</p> {character.episode.length}</h2>     */}
-                </div>
+            {character.length === 0 ? (<img className='loading' src={spinner} alt='spinner imagen'/>) :(
+                <>
+                    <div className={character.status==='unknown' ? "character__status-unknown" : (character.status==='Alive' ? 'character__status-alive' : 'character__status-dead')}>
+                        <img className="img__character" src={character.image} alt="img character"/>
+                    </div>
+                    <div className="details__character">
+                        <h2 className="property__character"><p className="data">Nombre:</p> {character.name}</h2>
+                        <h2 className="property__character"><p className="data">Género:</p> {character.gender}</h2>
+                        <h2 className="property__character"><p className="data">Especie:</p> {character.species}</h2>
+                        <h2 className="property__character"><p className="data">Status:</p> {character.status}</h2>
+                        <h2 className="property__character"><p className="data">Creado:</p> {moment(character.created).format('DD/MM/YY')}</h2>
+                        <h2 className="property__character"><p className="data">Type:</p> {character.type===''? 'none':character.type}</h2>
+        {/*NO PUEDO TRAER TODOS LOS DATOS!                 
+        <h2 className="status__character"><p className="date">Episodios:</p> {character.episode.length}</h2>     */}
+                    </div>
+                </>
+            )}
                 
             </div>
                 <Link to={back}><button className="button__back">back</button></Link>
