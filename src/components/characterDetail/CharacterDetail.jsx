@@ -33,7 +33,7 @@ const CharacterDetail = () => {
         <div className='charter__container'>
             <div className="card__character-details">
             {
-            /*console.log('dentro del render: ',character)*/
+            console.log('dentro del render: ',character)
             }
             {character.length === 0 ? (<img className='loading' src={spinner} alt='spinner imagen'/>) :(
                 <>
@@ -47,6 +47,7 @@ const CharacterDetail = () => {
                         <h2 className="property__character"><p className="data">Status:</p> {character.status}</h2>
                         <h2 className="property__character"><p className="data">Creado:</p> {moment(character.created).format('DD/MM/YY')}</h2>
                         <h2 className="property__character"><p className="data">Type:</p> {character.type===''? 'none':character.type}</h2>
+                        <h2 className="property__character"><p className="data">Location:</p> {character.location.name}</h2>
         {/*NO PUEDO TRAER TODOS LOS DATOS!                 
         <h2 className="status__character"><p className="date">Episodios:</p> {character.episode.length}</h2>     */}
                     </div>
