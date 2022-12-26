@@ -1,7 +1,7 @@
 ##### septiembre 2022
 # TP2 - React App (Skill Factory by AVALITH.)
 
-> El objetivo principal de este Challenge consistió en pasar una pagina clásica de HTML, CSS y JavaScript a un proyecto de React. La idea general es crear múltiples componentes, con distintos grados de dificultad, he ir renderizando cada uno con la implementación de nuevas dependencias. Con lo cual, podrán encontrar dentro del package.json librerías como:
+> El objetivo principal de este Challenge consistió en pasar una pagina clásica de HTML, CSS y JavaScript a un proyecto de React. La idea general es crear múltiples componentes, con distintos grados de dificultad, e ir renderizando cada uno con la implementación de nuevas dependencias. Con lo cual, podrán encontrar dentro del package.json librerías como:
 - React - Hook - Form
 - Axios
 - React - Router - Dom
